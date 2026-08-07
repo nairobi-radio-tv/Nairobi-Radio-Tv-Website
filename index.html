@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nairobi Radio TV | Dope Kenyan Talents</title>
+    <style>
+        :root {
+            --primary-blue: #0b3b60;
+            --accent-red: #c8102e;
+            --accent-green: #007a3d;
+            --accent-gold: #d4af37;
+            --dark-bg: #111827;
+            --light-bg: #f9fafb;
+            --text-dark: #1f2937;
+            --text-light: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-blue);
+            color: var(--text-light);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-placeholder {
+            width: 50px;
+            height: 50px;
+            background-color: var(--accent-red);
+            border: 2px solid var(--accent-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-gold);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(11, 59, 96, 0.85), rgba(0, 0, 0, 0.85)), url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--text-light);
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-red);
+            color: var(--text-light);
+            padding: 12px 28px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-green);
+        }
+
+        .section {
+            padding: 60px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: var(--primary-blue);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-green);
+            display: block;
+            margin: 8px auto 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-top: 4px solid var(--primary-blue);
+        }
+
+        .card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            text-align: center;
+        }
+
+        .value-box {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border-bottom: 3px solid var(--accent-gold);
+        }
+
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .social-btn {
+            background: var(--primary-blue);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-info {
+            background: var(--dark-bg);
+            color: white;
+            padding: 40px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: var(--primary-blue);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="logo-container">
+            <div class="logo-placeholder">NRTV</div>
+            <h2>Nairobi Radio TV</h2>
+        </div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#careers">Careers</a>
+            <a href="#socials">Socials</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Kenya's Home of Dope Talents 🔥💥</h1>
+        <p>A nationwide music platform discovery hub empowering upcoming musicians across all genres.</p>
+        <a href="https://youtube.com" target="_blank" class="btn">Watch NRTV Live</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2 class="section-title">About Nairobi Radio TV</h2>
+        <div class="grid" style="margin-bottom: 30px;">
+            <div class="card">
+                <h3>Our Mission</h3>
+                <p>To discover, showcase, and elevate Kenya’s emerging musical talents across all genres, connecting raw passion with global recognition and sustainable success.</p>
+            </div>
+            <div class="card">
+                <h3>Our Vision</h3>
+                <p>To be Africa’s premier youth-led media platform and the ultimate global engine for Kenyan music.</p>
+            </div>
+            <div class="card">
+                <h3>Our Philosophy</h3>
+                <p>Talent is everywhere, but opportunity is not. We exist to bridge that gap for Kenya’s young artists—redefining the local music blueprint and driving our cultural heartbeat onto the world stage.</p>
+            </div>
+        </div>
+
+        <h3 style="text-align: center; margin-bottom: 20px; color: var(--primary-blue);">Core Values</h3>
+        <div class="values-grid">
+            <div class="value-box"><strong>Talent First</strong><br>Prioritizing raw potential.</div>
+            <div class="value-box"><strong>Youth Empowerment</strong><br>Direct path to sponsorships.</div>
+            <div class="value-box"><strong>Innovation</strong><br>Elevating broadcast standards.</div>
+            <div class="value-box"><strong>Authenticity</strong><br>Celebrating diverse sounds.</div>
+            <div class="value-box"><strong>Global Impact</strong><br>Building worldwide brands.</div>
+        </div>
+    </section>
+
+    <!-- Products & Services -->
+    <section id="services" class="section" style="background-color: #f0f4f8;">
+        <h2 class="section-title">Products & Services</h2>
+        <div class="grid">
+            <div class="card"><h3>Advertisements</h3><p>Multi-platform advertising tailored for reach and impact across youth demographics.</p></div>
+            <div class="card"><h3>Branded Merchandise</h3><p>Official Nairobi Radio TV gear, clothing, and accessories.</p></div>
+            <div class="card"><h3>Physical Talent</h3><p>Book emerging and top-tier Kenyan artists for shows and commercial projects.</p></div>
+            <div class="card"><h3>Business & Job Talks</h3><p>Insightful shows and interviews covering industry, career, and business growth.</p></div>
+            <div class="card"><h3>Studio Services</h3><p>High-quality audio recording, video production, mixing, and mastering facilities.</p></div>
+            <div class="card"><h3>Shows & Events</h3><p>Organizing, hosting, and broadcasting live concerts and promotional showcases.</p></div>
+            <div class="card"><h3>Outsourcing Services</h3><p>Media production, audio engineering, and content creation services for external brands.</p></div>
+            <div class="card"><h3>Consultancy Services</h3><p>Strategic media guidance, brand strategy, and talent management solutions.</p></div>
+            <div class="card"><h3>Media Tenders</h3><p>Partnership and procurement opportunities for production and broadcast bids.</p></div>
+        </div>
+    </section>
+
+    <!-- Careers Section -->
+    <section id="careers" class="section">
+        <h2 class="section-title">Careers / Join Our Team</h2>
+        <div class="grid">
+            <div class="card"><h3>Marketing Officers</h3><p>Drive audience reach, commercial growth, and brand campaigns.</p></div>
+            <div class="card"><h3>Business Development Officers</h3><p>Identify strategic partnerships, corporate deals, and revenue channels.</p></div>
+            <div class="card"><h3>Reporters & Journalists</h3><p>Cover music news, culture stories, and exclusive artist interviews.</p></div>
+            <div class="card"><h3>DJs</h3><p>Curate, mix, and broadcast the freshest music tracks across all genres.</p></div>
+        </div>
+    </section>
+
+    <!-- Social Media Links -->
+    <section id="socials" class="section" style="background-color: #f0f4f8;">
+        <h2 class="section-title">Connect With Us</h2>
+        <div class="social-links">
+            <a href="#" class="social-btn">YouTube: Nairobi RadioTv Live</a>
+            <a href="#" class="social-btn">X: Nairobi Radio</a>
+            <a href="#" class="social-btn">Facebook: Nairobi Radio and TV</a>
+            <a href="#" class="social-btn">LinkedIn: Nairobi RadioTv</a>
+            <a href="#" class="social-btn">Instagram: Nairobi RadioTv</a>
+            <a href="#" class="social-btn">TikTok: Nairobi RadioTv</a>
+            <a href="#" class="social-btn">Twitch: Nairobi RadioTv</a>
+        </div>
+    </section>
+
+    <!-- Contact Page -->
+    <section id="contact" class="section">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-info">
+            <p><strong>Email:</strong> info@nairobiradio.co.ke</p>
+            <p><strong>Phone:</strong> 0113329296</p>
+            <p><strong>P.O. Box:</strong> 30325-00100 Nairobi, Kenya</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Nairobi Radio TV Station. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
